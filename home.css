@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   height: 50vh;
-  background: url("/assets/images/hero-section.webp");
+  background: url("assets/images/hero-section.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
