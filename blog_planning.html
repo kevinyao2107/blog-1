@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Scheduling</title>
+    <link rel="stylesheet" href="/blog_planning.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/assets/js/admin.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+          <li>
+            <a href="/dashboard.html" class="profile-go">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+            </a>
+            <div class="profile-menu">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+
+              <ul id="dropdown">
+                <li><a href="/dashboard.html">Tableau de bord</a></li>
+                <li><a href="/dashboard_blog.html">Blogs</a></li>
+                <li><a href="/blog_Scheduling.html">Planification</a></li>
+                <li><a href="/profile.html">Paramètres</a></li>
+                <li><a href="#">Se déconnecter</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="schedule-container">
+      <form method="post">
+        <h1>Planification</h1>
+        <p class="description">
+          Définissez les paramètres pour que l’IA génère des articles de blog.
+        </p>
+
+        <label for="topics">Thématiques</label>
+        <div class="custom-select-wrapper">
+          <div class="custom-select">
+            <div class="custom-select__trigger">
+              <span data-value="Technologie">Technologie</span>
+              <div><i data-lucide="chevron-down" class="arrow"></i></div>
+            </div>
+            <div class="custom-options">
+              <div class="custom-option selected" data-value="Technologie">
+                <i data-lucide="check" class="check-icon"></i>
+                Technologie
+              </div>
+              <div class="custom-option" data-value="Santé">
+                <i data-lucide="check" class="check-icon"></i>
+                Santé
+              </div>
+              <div class="custom-option" data-value="Finance">
+                <i data-lucide="check" class="check-icon"></i>
+                Finance
+              </div>
+            </div>
+          </div>
+          <!-- ce champ caché contiendra la valeur sélectionnée -->
+          <input
+            type="hidden"
+            name="topic"
+            id="topic-input"
+            value="Technologie"
+          />
+        </div>
+
+        <label for="articles-per-day">Articles par jour</label>
+        <div class="articles-input">
+          <input type="number" id="articles-per-day" value="2" min="1" />
+        </div>
+
+        <label for="time-input">Heures de publication</label>
+        <div class="time-buttons">
+          <button type="button">09:00</button>
+          <button type="button">12:00</button>
+          <button type="button">17:00</button>
+          <button type="button">00:00</button>
+          <button type="button">04:00</button>
+        </div>
+
+        <button type="submit" class="schedule-btn">Planifier</button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-icons">
+          <a href="#">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="#"> <i data-lucide="instagram"> </i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 VotreEntreprise. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const customSelect = document.querySelector(".custom-select");
+        const trigger = customSelect.querySelector(".custom-select__trigger");
+        const options = customSelect.querySelectorAll(".custom-option");
+        const triggerText = trigger.querySelector("span");
+        const hiddenInput = document.getElementById("topic-input");
+
+        // Initialiser Lucide icons
+        lucide.createIcons();
+
+        // Ouvre/ferme le dropdown
+        trigger.addEventListener("click", () => {
+          customSelect.classList.toggle("open");
+        });
+
+        // Sélection d'une option
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            // Retirer l'ancienne sélection
+            customSelect
+              .querySelector(".custom-option.selected")
+              .classList.remove("selected");
+            // Marquer la nouvelle
+            option.classList.add("selected");
+            const val = option.getAttribute("data-value");
+            triggerText.textContent = option.textContent.trim();
+            triggerText.dataset.value = val;
+            hiddenInput.value = val;
+
+            // Refermer
+            customSelect.classList.remove("open");
+
+            // Re-créer les icônes Lucide
+            lucide.createIcons();
+
+            // Ici tu peux émettre un événement ou appeler une callback
+            // par exemple : onTopicChange(option.dataset.value)
+          });
+        });
+
+        // Fermer si clic à l'extérieur
+        document.addEventListener("click", (e) => {
+          if (!customSelect.contains(e.target)) {
+            customSelect.classList.remove("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

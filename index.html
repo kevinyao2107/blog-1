@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css" />
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/home.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+
+          <li>
+            <a href="/login.html">Connexion</a>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div>
+        <h1>Découvrez, apprenez, partagez.</h1>
+        <p>Un blog fait pour les esprits curieux.</p>
+        <button id="read-more" class="btn-primary">Lire plus</button>
+      </div>
+    </section>
+    <main>
+      <section class="categories">
+        <a href="/caegories.html" class="category-box">
+          <i data-lucide="cpu" class="icone"></i>
+          <h4>Technologie</h4>
+        </a>
+        <a href="/caegories.html" class="category-box">
+          <i data-lucide="brush" class="icone"></i>
+          <h4>Design & Créativité</h4>
+        </a>
+        <a href="/caegories.html" class="category-box">
+          <i data-lucide="briefcase-business" class="icone"></i>
+          <h4>Business & Entrepreneuriat</h4>
+        </a>
+        <a href="/caegories.html" class="category-box">
+          <i data-lucide="signature" class="icone"></i>
+          <h4>Développement Personnel</h4>
+        </a>
+        <a href="/caegories.html" class="category-box">
+          <i data-lucide="waves-ladder" class="icone"></i>
+          <h4>Lifestyle</h4>
+        </a>
+        <a href="/caegories.html" class="category-box">
+          <i data-lucide="rss" class="icone"></i>
+          <h4>Actualité & Tendances</h4>
+        </a>
+      </section>
+
+      <section class="content">
+        <div>
+          <div class="content-posts">
+            <h3>Articles mis en avant</h3>
+            <div class="content-posts__grid">
+              <a href="/details_blog.html" class="content-post">
+                <img src="/assets/images/blog-1.webp" alt="Post Image" />
+                <div>
+                  <h4>Web Floran Post</h4>
+                  <p>Lorem ipsum dolors at amet, consectetur edit.</p>
+                </div>
+              </a>
+              <a href="/details_blog.html" class="content-post">
+                <img src="/assets/images/blog-2.webp" alt="Post Image" />
+                <div>
+                  <h4>Blog Plog Post</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur edit.</p>
+                </div>
+              </a>
+              <a href="/details_blog.html" class="content-post">
+                <img src="/assets/images/blog-3.webp" alt="Post Image" />
+                <div>
+                  <h4>Blog Plog Post</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur edit.</p>
+                </div>
+              </a>
+              <a href="/details_blog.html" class="content-post">
+                <img src="/assets/images/blog-4.webp" alt="Post Image" />
+                <div>
+                  <h4>Blog Plog Post</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur edit.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-me">
+            <h3>À propos de moi</h3>
+            <div class="about-me__content">
+              <img
+                src="/assets/images/user-profil.webp"
+                class="avatar"
+                alt="Avatar"
+              />
+              <p>
+                <strong>Je suis John Doe</strong>: Rédacteur passionné, j’écris
+                des articles captivants, optimisés SEO, qui informent, engagent
+                et boostent la visibilité des marques dans divers domaines
+                digitaux.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-right">
+          <div>
+            <h3>S'abonner à la newsletter</h3>
+            <input type="email" placeholder="Enter your email" />
+            <button class="btn-primary">S'abonner</button>
+          </div>
+          <div class="recent-posts">
+            <h3>Articles récents</h3>
+            <ul class="recent-posts__items">
+              <li>Accuntian maorlat</li>
+              <li>Attempo larius derid</li>
+              <li>Lorem ipsum dolor</li>
+              <li>Exception urpsimist</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-icons">
+          <a href="#">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="#"> <i data-lucide="instagram"> </i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 VotreEntreprise. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

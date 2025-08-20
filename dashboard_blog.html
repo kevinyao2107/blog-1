@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Blog Dashboard</title>
+    <script src="/assets/js/admin.js" defer></script>
+    <link rel="stylesheet" href="/dashboard_blog.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+          <li>
+            <a href="/dashboard.html" class="profile-go">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+            </a>
+            <div class="profile-menu">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+
+              <ul id="dropdown">
+                <li><a href="/dashboard.html">Tableau de bord</a></li>
+                <li><a href="/dashboard_blog.html">Blogs</a></li>
+                <li><a href="/blog_Scheduling.html">Planification</a></li>
+                <li><a href="/profile.html">Paramètres</a></li>
+                <li><a href="#">Se déconnecter</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1>Articles de Blog Générés par IA</h1>
+      <div class="grid">
+        <!-- Carte 1 -->
+        <div class="card">
+          <img src="/assets/images/blog-5.webp" alt="Article" />
+          <div class="card-content">
+            <h3>Le Futur de l’Intelligence Artificielle</h3>
+            <div class="card-content_bottom">
+              <p>3 Avril 2024</p>
+              <a href="/edict_blog.html" class="edit-btn">
+                <i data-lucide="pencil" class="edit-btn_icone"></i>
+                <span>Modifier</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="card">
+          <img src="/assets/images/blog-6.webp" alt="Article" />
+          <div class="card-content">
+            <h3>10 Conseils pour un Design Minimaliste</h3>
+            <div class="card-content_bottom">
+              <p>3 Avril 2024</p>
+              <a href="/edict_blog.html" class="edit-btn">
+                <i data-lucide="pencil" class="edit-btn_icone"></i>
+                <span>Modifier</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="card">
+          <img src="/assets/images/blog-7.webp" alt="Article" />
+          <div class="card-content">
+            <h3>Comprendre les Tendances du Marché</h3>
+            <div class="card-content_bottom">
+              <p>3 Avril 2024</p>
+              <a href="/edict_blog.html" class="edit-btn">
+                <i data-lucide="pencil" class="edit-btn_icone"></i>
+                <span>Modifier</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="card">
+          <img src="/assets/images/blog-11.webp" alt="Article" />
+          <div class="card-content">
+            <h3>Comment l'IA Révolutionne la Santé</h3>
+            <div class="card-content_bottom">
+              <p>3 Avril 2024</p>
+              <a href="/edict_blog.html" class="edit-btn">
+                <i data-lucide="pencil" class="edit-btn_icone"></i>
+                <span>Modifier</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div class="card">
+          <img src="/assets/images/blog-10.webp" alt="Article" />
+          <div class="card-content">
+            <h3>Typographie et Design Web</h3>
+            <div class="card-content_bottom">
+              <p>3 Avril 2024</p>
+              <a href="/edict_blog.html" class="edit-btn">
+                <i data-lucide="pencil" class="edit-btn_icone"></i>
+                <span>Modifier</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="card">
+          <img src="/assets/images/blog-9.webp" alt="Article" />
+          <div class="card-content">
+            <h3>Stratégies Clés pour la Croissance</h3>
+            <div class="card-content_bottom">
+              <p>3 Avril 2024</p>
+              <a href="/edict_blog.html" class="edit-btn">
+                <i data-lucide="pencil" class="edit-btn_icone"></i>
+                <span>Modifier</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#" class="page-link chevron"
+          ><i data-lucide="chevron-left"></i
+        ></a>
+        <a href="#" class="page-link active">1</a>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <a href="#" class="page-link chevron"
+          ><i data-lucide="chevron-right"></i
+        ></a>
+      </div>
+    </main>
+  </body>
+
+  <footer>
+    <div class="footer-links">
+      <div class="social-icons">
+        <a href="#">
+          <i data-lucide="twitter"></i>
+        </a>
+        <a href="#"> <i data-lucide="instagram"> </i></a>
+        <a href="#"><i data-lucide="linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; 2025 VotreEntreprise. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</html>

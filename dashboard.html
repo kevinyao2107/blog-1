@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/assets/js/admin.js" defer></script>
+    <script src="/assets/js/dashboard.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+          <li>
+            <a href="/dashboard.html" class="profile-go">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+            </a>
+            <div class="profile-menu">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+
+              <ul id="dropdown">
+                <li><a href="/dashboard.html">Tableau de bord</a></li>
+                <li><a href="/dashboard_blog.html">Blogs</a></li>
+                <li><a href="/blog_Scheduling.html">Planification</a></li>
+                <li><a href="/profile.html">Paramètres</a></li>
+                <li><a href="#">Se déconnecter</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="container-header">
+          <h1>Bon retour, John Doe</h1>
+          <p>Bienvenue de nouveau ! Nous sommes ravis de vous revoir.</p>
+          <div class="container-header__btn">
+            <button id="add-scheduling" class="btn-primary">Commencer</button>
+          </div>
+        </section>
+
+        <div class="layout">
+          <div>
+            <section class="overview">
+              <div class="overview-card">
+                <div class="value">10</div>
+                <div class="label">Articles totaux</div>
+              </div>
+              <div class="overview-card">
+                <div class="value">235</div>
+                <div class="label">Vues</div>
+              </div>
+              <div class="overview-card">
+                <div class="value">12</div>
+                <div class="label">Commentaires</div>
+              </div>
+            </section>
+
+            <section class="recent-posts">
+              <div class="recent-posts_header">
+                <h3>Articles récents</h3>
+                <a href="/dashboard_blog.html">voir tout</a>
+              </div>
+              <div class="posts-list">
+                <div class="post-card">
+                  <img src="/assets/images/blog-8.webp" alt="Article" />
+                  <div class="post-card-content">
+                    <h3>Créer une application web</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+                <div class="post-card">
+                  <img src="/assets/images/blog-10.webp" alt="Article" />
+                  <div class="post-card-content">
+                    <h3>Concevoir pour la simplicité</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="chart-container">
+              <canvas id="activityChart"></canvas>
+            </div>
+          </div>
+
+          <aside class="sidebar">
+            <div class="profile-box">
+              <img src="/assets/images/user.png" alt="John Doe" />
+              <h3>John Doe</h3>
+              <p>johndoe@example.com</p>
+              <button class="btn-primary" id="update-btn">Mettre à jour</button>
+            </div>
+
+            <div class="tasks-box">
+              <h4>Activité mensuelle</h4>
+              <ul class="tasks-list">
+                <li>
+                  <label>
+                    <input type="checkbox" class="task-checkbox" />
+                    <span class="custom-checkbox"></span>
+                    Rédiger un nouvel article de blog
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="task-checkbox" checked />
+                    <span class="custom-checkbox"></span>
+                    Mettre à jour les informations du profil
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="task-checkbox" checked />
+                    <span class="custom-checkbox"></span>
+                    Répondre aux commentaires
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="users-box">
+              <h4>Utilisateurs</h4>
+              <ul>
+                <li>
+                  <a href=""
+                    ><span>John Doe</span>
+                    <i data-lucide="chevron-right" class="chevron"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Jane Smith</span>
+                    <i data-lucide="chevron-right" class="chevron"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Bob Johnson</span>
+                    <i data-lucide="chevron-right" class="chevron"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-icons">
+          <a href="#">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="#"> <i data-lucide="instagram"> </i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 VotreEntreprise. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      lucide.createIcons();
+      const ctx = document.getElementById("activityChart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Fev", "Mar", "Avr", "Mai", "Juin"],
+          datasets: [
+            {
+              label: "Activité mensuelle",
+              data: [120, 150, 200, 180, 220, 300],
+              borderColor: "#2563eb",
+              fill: {
+                target: "origin",
+                above: "rgba(37,99,235,0.2)",
+              },
+              tension: 0.3,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: { y: { beginAtZero: true } },
+        },
+      });
+    </script>
+  </body>
+</html>

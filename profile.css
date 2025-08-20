@@ -1,0 +1,74 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* En-tête du profil */
+.profile-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.profile-header .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.profile-header h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.profile-header .subtitle {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Formulaire à deux colonnes */
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  position: relative;
+}
+
+/* Sections du formulaire */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form-section h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* Labels et champs */
+label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  resize: vertical;
+}
+
+/* Petite adaptation responsive */
+@media (max-width: 700px) {
+  .profile-form {
+    grid-template-columns: 1fr;
+  }
+  .save-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}

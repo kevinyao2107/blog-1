@@ -1,0 +1,90 @@
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+.hero p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  padding: 60px 20px;
+  gap: 10px;
+  margin: auto;
+}
+.feature {
+  text-align: center;
+}
+.icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon.gear {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23111" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z"/><path d="M19.4 15a1.65 1.65 0 01-.33 1.82l-.06.06a2 2 0 01-2.83 0l-.38-.38a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V19.5a2 2 0 01-2 2h-.5a2 2 0 01-2-2v-.46a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.38.38a2 2 0 01-2.83 0l-.06-.06A1.65 1.65 0 015 15.01a1.65 1.65 0 00-1.51-1H3.5a2 2 0 01-2-2v-.5a2 2 0 012-2h.46a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.38-.38a2 2 0 010-2.83l.06-.06A1.65 1.65 0 018 5a1.65 1.65 0 001-1.51V3.5a2 2 0 012-2h.5a2 2 0 012 2v.46c.13.69.63 1.26 1.31 1.51a1.65 1.65 0 001.82-.33l.38-.38a2 2 0 012.83 0l.06.06A1.65 1.65 0 0119 8a1.65 1.65 0 001.51 1H21.5a2 2 0 012 2v.5a2 2 0 01-2 2h-.46c-.69.13-1.26.63-1.51 1z"/></svg>');
+}
+.icon.pie {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23111" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 2a9 9 0 109 9h-9V2z"/><path d="M12 11l7.07 7.07"/></svg>');
+}
+.icon.thumbs {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23111" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 9V5a2 2 0 00-2-2h-4v12h4a2 2 0 002-2v-4z"/><path d="M5 15H2v-4h3v4z"/></svg>');
+}
+.feature h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+.feature p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* About */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  width: 70%;
+  margin: auto;
+}
+
+.about-image {
+  flex: 1;
+}
+.about-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.about-text {
+  max-width: 600px;
+}
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.about-text p {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .about,
+  .features {
+    width: 95%;
+    flex-direction: column;
+  }
+}

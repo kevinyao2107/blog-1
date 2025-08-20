@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="blogs.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+
+          <li>
+            <a href="/login.html">Connexion</a>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="blog-container">
+      <h1>Business</h1>
+
+      <div class="posts-grid">
+        <!-- Card 1 -->
+        <article class="post-card">
+          <a href="/details_blog.html">
+            <img
+              src="/assets/images/blog-9.webp"
+              alt="Building a Minimalist Workspace"
+            />
+            <div class="post-info">
+              <h2>Building a Minimalist Workspace</h2>
+              <time datetime="2024-04-15">15 avr. 2024</time>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div></a
+          >
+        </article>
+
+        <!-- Card 2 -->
+        <article class="post-card">
+          <a href="/details_blog.html">
+            <img
+              src="/assets/images/blog-5.webp"
+              alt="The Future of Web Development"
+            />
+            <div class="post-info">
+              <h2>The Future of Web Development</h2>
+              <time datetime="2024-04-15">15 avr. 2024</time>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div></a
+          >
+        </article>
+
+        <!-- Card 3 -->
+        <article class="post-card">
+          <a href="/details_blog.html">
+            <img
+              src="/assets/images/blog-11.webp"
+              alt="Effective Remote Collaboration"
+            />
+            <div class="post-info">
+              <h2>Effective Remote Collaboration</h2>
+              <time datetime="2024-04-15">15 avr. 2024</time>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div></a
+          >
+        </article>
+
+        <!-- Card 4 -->
+        <article class="post-card">
+          <a href="/details_blog.html">
+            <img
+              src="/assets/images/blog-8.webp"
+              alt="Top 10 Mobile Apps for Productivity"
+            />
+            <div class="post-info">
+              <h2>Top 10 Mobile Apps for Productivity</h2>
+              <time datetime="2024-04-15">15 avr. 2024</time>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div></a
+          >
+        </article>
+      </div>
+
+      <!-- Pagination -->
+      <nav class="pagination">
+        <a href="#" class="prev">&lsaquo;</a>
+        <a href="#" class="page active">1</a>
+        <a href="#" class="next">&rsaquo;</a>
+      </nav>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-icons">
+          <a href="#">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="#"> <i data-lucide="instagram"> </i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 VotreEntreprise. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

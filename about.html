@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/about.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+
+          <li>
+            <a href="/login.html">Connexion</a>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Bienvenue sur BlogMatic IA</h1>
+        <p>
+          Découvrez chaque jour des articles pertinents et inspirants générés
+          par notre IA.
+        </p>
+        <button class="btn-primary">En savoir plus</button>
+      </section>
+
+      <!-- Features -->
+      <section class="features">
+        <div class="feature">
+          <div class="icon gear"></div>
+          <h3>Génération Automatique</h3>
+          <p>
+            Obtenez des articles complets en quelques secondes, sans effort
+            manuel.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="icon pie"></div>
+          <h3>Contenu Personnalisé</h3>
+          <p>
+            Choisissez vos thématiques et notre IA adapte le style à vos
+            besoins.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="icon thumbs"></div>
+          <h3>Optimisation SEO</h3>
+          <p>
+            Tous les articles sont optimisés pour le référencement et
+            l’engagement.
+          </p>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      <section class="about">
+        <div class="about-image">
+          <img
+            class="about-img"
+            src="/assets/images/user.png"
+            alt="Portrait de l'équipe"
+          />
+        </div>
+        <div class="about-text">
+          <h2>Qui sommes-nous ?</h2>
+          <p>
+            BlogMatic IA est une plateforme innovante qui utilise l’intelligence
+            artificielle pour créer du contenu de qualité en un temps record.
+            Notre mission est de simplifier la création d’articles et d’aider
+            les créateurs à se concentrer sur l’essentiel.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-icons">
+          <a href="#">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="#"> <i data-lucide="instagram"> </i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 VotreEntreprise. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

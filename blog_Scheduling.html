@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planification de Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/blog_Scheduling.css" />
+    <script src="/assets/js/admin.js" defer></script>
+    <script src="/assets/js/blogScheduling.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+          <li>
+            <a href="/dashboard.html" class="profile-go">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+            </a>
+            <div class="profile-menu">
+              <img src="/assets/images/user-profil.webp" alt="User" />
+
+              <ul id="dropdown">
+                <li><a href="/dashboard.html">Tableau de bord</a></li>
+                <li><a href="/dashboard_blog.html">Blogs</a></li>
+                <li><a href="/blog_Scheduling.html">Planification</a></li>
+                <li><a href="/profile.html">Paramètres</a></li>
+                <li><a href="#">Se déconnecter</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Planification des Articles</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Catégories</th>
+            <th>Fréquence</th>
+            <th>Heures de publication</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Technologie</td>
+            <td>3 fois par jour</td>
+            <td>10:00, 14:00, 18:00</td>
+            <td>
+              <button data-id="42" class="action-btn edit">
+                <i data-lucide="pencil"></i>
+              </button>
+              <button class="action-btn delete">
+                <i data-lucide="trash-2"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Santé</td>
+            <td>1 fois par jour</td>
+            <td>08:30</td>
+            <td>
+              <button data-id="42" class="action-btn edit">
+                <i data-lucide="pencil"></i>
+              </button>
+              <button class="action-btn delete">
+                <i data-lucide="trash-2"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Finance</td>
+            <td>2 fois par jour</td>
+            <td>09:00, 16:00</td>
+            <td>
+              <button data-id="42" class="action-btn edit">
+                <i data-lucide="pencil"></i>
+              </button>
+              <button class="action-btn delete">
+                <i data-lucide="trash-2"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-icons">
+          <a href="#">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="#"> <i data-lucide="instagram"> </i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 VotreEntreprise. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

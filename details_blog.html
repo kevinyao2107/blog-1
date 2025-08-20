@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/details_blog.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-mobile_bg" id="navbar-mobile_bg"></div>
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#"><i data-lucide="search" class="search-icon"></i></a>
+          </li>
+
+          <li>
+            <a href="/login.html">Connexion</a>
+          </li>
+        </ul>
+        <div class="navbar-icon" id="menu-btn">
+          <i data-lucide="menu" id="menu"></i>
+        </div>
+      </nav>
+      <div class="search-modal" id="search-modal">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-dialog">
+          <button class="search-close" id="search-close">&times;</button>
+          <h2>Recherche</h2>
+          <form class="search-dialog__form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tapez votre recherche..."
+            />
+            <button class="btn-primary" id="search-submit">
+              <i data-lucide="search" class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="breadcrumb">Accueil &nbsp;•&nbsp; Titre de l’article</div>
+        <h1 class="title">Titre de l’article</h1>
+        <div class="meta">Jane Smith • 1 Janvier 2024 • Technologie</div>
+      </section>
+
+      <section class="content-wrapper">
+        <div class="main-content">
+          <img
+            src="/assets/images/blog-5.webp"
+            alt="Blog Image"
+            class="main-image"
+          />
+
+          <div class="text-content">
+            <p>
+              L’intelligence artificielle : Révolution technologique du XXIe
+              siècle
+            </p>
+            <p>
+              L’intelligence artificielle (IA) représente l’une des avancées les
+              plus marquantes de notre ère. Elle désigne un ensemble de
+              technologies permettant à des machines de simuler l’intelligence
+              humaine, en apprenant, en résolvant des problèmes, en prenant des
+              décisions et, dans certains cas, en s’adaptant de manière
+              autonome. Présente aujourd’hui dans notre quotidien, l’IA
+              transforme profondément des secteurs clés tels que la santé,
+              l’éducation, la finance, l’industrie, ou encore le marketing.
+            </p>
+            <p>
+              Grâce à des techniques comme l’apprentissage automatique (machine
+              learning), les réseaux neuronaux profonds (deep learning) et le
+              traitement du langage naturel (NLP), l’IA peut analyser de vastes
+              quantités de données, détecter des schémas complexes et produire
+              des prédictions avec une précision croissante. Ces capacités sont
+              à l’origine de nombreuses innovations, comme les assistants
+              vocaux, les systèmes de recommandation, les voitures autonomes, ou
+              encore les outils de diagnostic médical assisté.
+            </p>
+            <p>
+              Toutefois, cette révolution soulève aussi des questions éthiques
+              majeures : biais algorithmiques, protection des données
+              personnelles, responsabilité en cas d’erreurs, ou encore impact
+              sur l’emploi. Il est donc essentiel d’encadrer le développement de
+              l’IA par des normes transparentes et responsables, afin de
+              garantir que son évolution soit bénéfique pour l’ensemble de la
+              société.
+            </p>
+            <p>
+              En résumé, l’intelligence artificielle n’est pas simplement une
+              technologie du futur : elle façonne déjà notre présent. Bien
+              utilisée, elle représente un levier puissant pour résoudre des
+              défis mondiaux, accroître l’efficacité de nos systèmes et
+              améliorer la qualité de vie. Mais son potentiel ne pourra être
+              pleinement réalisé que si nous l’abordons avec discernement,
+              éthique et vision à long terme.
+            </p>
+          </div>
+
+          <!-- Section Comments -->
+          <section class="comments">
+            <h3>Comments</h3>
+            <ul class="comment-list">
+              <li>
+                <div class="author">Alice Dupont</div>
+                <div class="comment-body">
+                  Super article, vraiment instructif ! Merci pour ces astuces.
+                </div>
+              </li>
+              <li>
+                <div class="author">Marc Leblanc</div>
+                <div class="comment-body">
+                  J’ai testé la méthode et ça fonctionne parfaitement.
+                </div>
+              </li>
+            </ul>
+
+            <!-- Formulaire d'ajout de commentaire -->
+            <form class="comment-form">
+              <textarea
+                rows="4"
+                placeholder="Écrire un commentaire..."
+                required
+              ></textarea>
+              <button class="btn-primary" type="submit">
+                Publier le commentaire
+              </button>
+            </form>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <div class="author-box">
+            <img
+              src="/assets/images/user-profil.webp"
+              alt="Author"
+              class="author-img"
+            />
+            <h3>Qui est l’auteur ?</h3>
+            <p>
+              Passionné par l'écriture, je partage idées, savoir et inspiration.
+            </p>
+          </div>
+
+          <div class="related-posts">
+            <h3>Articles similaires</h3>
+            <ul>
+              <li><a href="#">Aenean feugiat libero</a></li>
+              <li><a href="#">Curabitur ullamcorper</a></li>
+              <li><a href="#">Donec convallis augue</a></li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div class="social-icons">
+          <a href="#">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="#"> <i data-lucide="instagram"> </i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; 2025 VotreEntreprise. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-auth {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.forgot {
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.9rem;
+}
+
+.signup a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+.signup a:hover {
+  text-decoration: underline;
+}
